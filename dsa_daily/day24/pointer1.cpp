@@ -1,19 +1,35 @@
-#include<iostream>
-using namespace std ;
-int main ()
+#include <iostream>
+using namespace std;
+int main()
 {
- int how ;
- cout<<"Enter the size of array : ";
- cin>>how;
- int *p = (int * )malloc(how * sizeof(int));
- cout<<"Address of first mem allocation is : "<<p;
-cout<<"Enter the values in the array :\n";
-for (int i=0;i<how;i++){
-    cin>>p[i];
-}
+    int how;
+    cout << "Enter the size of array : ";
+    cin >> how;
+    int *p = (int *)malloc(how * sizeof(int));
+    cout << "\nAddress of first mem allocation is : " << p;
+    cout << "\nEnter the values in the array :\n";
+    for (int i = 0; i < how; i++)
+    {
+        cin >> p[i];
+    }
 
-for (int j = 0;j<how;j++){
-cout<<p[j]<<endl;
-}
-return 0;
+    cout << "Printing values of the array :\n";
+    for (int j = 0; j < how; j++)
+    {
+        cout << p[j] << endl;
+    }
+
+    int more;
+    cout << "Enter the size of array : ";
+    cin >> more;
+     int *q = (int *)malloc(more * sizeof(int));
+    cout << "\nAddress of first mem allocation is : " << q;
+    cout << "\nPrinting values of the second array :\n";
+    for (int k = 0; k < more; k++)
+    {
+        cout << q[k] << endl;
+    }
+
+
+    return 0;
 }
