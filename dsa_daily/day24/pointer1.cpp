@@ -25,11 +25,18 @@ int main()
      int *q = (int *)malloc(more * sizeof(int));
     cout << "\nAddress of first mem allocation is : " << q;
     cout << "\nPrinting values of the second array :\n";
+
+    // copying the values
+    for (int c = 0 ;c<how;c++){
+    q[c]=p[c];
+    }
+
     for (int k = 0; k < more; k++)
     {
         cout << q[k] << endl;
     }
 
-
+free(p);
+	p=NULL;
     return 0;
 }
