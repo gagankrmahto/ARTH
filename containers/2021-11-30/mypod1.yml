@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inteam2
+  labels: 
+    dc: IN
+    team: team2
+spec:
+  containers:
+  - name: mywebcont
+    image: httpd
